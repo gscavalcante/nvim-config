@@ -1,3 +1,10 @@
+local formatters = {
+  "black",
+  "flake8",
+  "isort",
+  "stylua",
+}
+
 return {
   "stevearc/conform.nvim",
   event = { "BufWritePre" },
@@ -18,12 +25,7 @@ return {
       "WhoIsSethDaniel/mason-tool-installer.nvim",
       config = function()
         require("mason-tool-installer").setup {
-          ensure_installed = {
-            "black",
-            "flake8",
-            "isort",
-            "stylua",
-          },
+          ensure_installed = formatters,
         }
       end,
     },
