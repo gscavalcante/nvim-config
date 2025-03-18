@@ -3,6 +3,7 @@ local formatters = {
   "flake8",
   "isort",
   "stylua",
+  "rustfmt",
 }
 
 return {
