@@ -2,8 +2,10 @@ local formatters = {
   "black",
   "flake8",
   "isort",
-  "stylua",
+  "markdownfmt",
   "rustfmt",
+  "stylua",
+  "terraform_fmt",
 }
 
 return {
