@@ -181,7 +181,7 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
+        ts_ls = {},
         --
 
         lua_ls = {
@@ -218,6 +218,7 @@ return {
         "black",
         "flake8",
         "isort",
+        "prettier",
         "rustfmt",
         "stylua", -- Used to format Lua code
       })
@@ -272,9 +273,11 @@ return {
         }
       end,
       formatters_by_ft = {
+        javascript = { "prettier" },
         lua = { "stylua" },
         python = { "flake8", "black", "isort" },
         rust = { "rustfmt" },
+        typescript = { "prettier" },
       },
     },
   },
